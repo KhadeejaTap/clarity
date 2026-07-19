@@ -1,0 +1,3 @@
+A desktop productivity app where u set goals, manage todos, visualize progress, and gamify productivity. AI assistant for insights and guidance?
+stage 1 - extension
+	a - block websites based on timer
