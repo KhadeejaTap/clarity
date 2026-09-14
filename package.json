@@ -1,11 +1,12 @@
 {
-  "name": "lock-tf-in",
+  "name": "clarity",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:ext": "vite build && cp manifest.json dist/ && mkdir -p dist/icons && cp public/icons/* dist/icons/ 2>/dev/null; python3 gen_icons.py 2>/dev/null || true",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -15,6 +16,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@types/chrome": "^0.2.9",
     "@types/node": "^24.13.2",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
