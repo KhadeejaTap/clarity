@@ -1,6 +1,6 @@
 # Requirements
 
-## Stage 1 — Chrome Extension (Current)
+## Stage 1 — Chrome Extension ✅
 
 ### Must Have
 - [x] Pomodoro timer (configurable work/break durations)
@@ -18,14 +18,24 @@
 - [ ] Daily stats page (pomodoros completed, focus time)
 - [ ] Export/import settings
 
-## Stage 2 — Full Web App (Future)
+## Stage 2 — Backend API ✅
 
-- [ ] Goals & todos management
-- [ ] XP + Levels + Streaks (RPG-style gamification)
-- [ ] GitHub-style contribution heatmap
-- [ ] Charts & graphs (weekly goals, trends)
-- [ ] Express + SQLite backend
-- [ ] Extension syncs data to web app
+- [x] Express + SQLite backend
+- [x] User auth (register, login, JWT)
+- [x] Goals CRUD
+- [x] Todos CRUD + completion with XP
+- [x] Focus sessions logging
+- [x] XP + Levels system (level = floor(sqrt(xp/50)) + 1)
+- [x] Streak tracking (server-side)
+- [x] Achievements system (8 unlockable badges)
+- [x] Stats endpoints (overview, heatmap, weekly summary)
+
+### Not Yet Done
+- [ ] Extension syncs focus sessions to server
+- [ ] Login UI in extension popup
+- [ ] Full web app frontend (dashboard, goals, todos UI)
+- [ ] GitHub-style contribution heatmap (frontend)
+- [ ] Charts & graphs (frontend)
 - [ ] Retro / pixel-art UI theme
 
 ## Stage 3 — AI Assistant (Future)
