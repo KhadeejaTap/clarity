@@ -1,0 +1,4 @@
+node_modules/
+dist/
+clarity.db
+.env
