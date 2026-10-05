@@ -1,5 +1,0 @@
-A desktop productivity app where u set goals, manage todos, visualize progress, and gamify productivity. AI assistant for insights and guidance?
-stage 1 - extension
-	a - block websites based on timer
-------full stack dev notes ----
-js library . uses components . js xml - html like code in js . virtual dom .
