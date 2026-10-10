@@ -1,0 +1,9 @@
+things i learned?
+chrome ext needs manigest.json for metadata n which file is "landing pg"
+can also include many icons like diff sizes, diff themes
+IIFE: Immediately Invoked Function Expression.
+const greeting = (
+	() => { const greetingString = "Hello, Odinite!"; const farewellString = "Bye bye, Odinite!"; return greetingString; }
+)these parenthesis are turning it into an expression   ()  this immediately calls it ; so we dont need to do
+const greeting = () => { const greetingString = "Hello, Odinite!"; const farewellString = "Bye bye, Odinite!"; return greetingString; }
+greeting();

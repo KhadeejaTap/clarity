@@ -1,0 +1,25 @@
+{
+	"manifest_version": 3,
+	"icons": {
+		"32": "utils/star.png"
+	},
+	"name": "clarity",
+	"version": "1.0",
+	"permissions": [
+		"storage",
+		"declarativeNetRequest",
+		"declarativeNetRequestWithHostAccess"
+	],
+	"host_permissions": [
+		"<all_urls>"
+	],
+	"description": "tool to help u focus by blocking sites",
+	"options_ui": {
+		"page": "ui/blocklist.html",
+		"open_in_tab": true
+	},
+	"action": {
+		"default_icon": "utils/star.png",
+		"default_popup": "ui/index.html"
+	}
+}
