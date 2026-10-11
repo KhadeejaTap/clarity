@@ -4,21 +4,26 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>blocklist</title>
+	<title>Clarity - Blocklist</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-	<div>
+<body class="options-page">
+	<div class="card">
+		<div class="header">
+			<img src="../utils/star.png" alt="star icon">
+			<h2>Blocklist</h2>
+		</div>
+
 		<form action="" method="get" class="website_form">
-			<label for="website">website to block:</label>
-			<input type="text" name="website" id="inputSite" required />
-			<input type="submit" value="block" />
+			<input type="text" name="website" id="inputSite" placeholder="e.g. reddit.com" required />
+			<input type="submit" value="Block" />
 		</form>
+
 		<ul id="siteList"></ul>
 	</div>
-	<script src="blocklist.js"></script>
 
-	<!-- i need to store list in json -->
+	<script src="blocklist.js"></script>
 </body>
 
 </html>

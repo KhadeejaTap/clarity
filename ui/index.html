@@ -5,18 +5,32 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Clarity</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-	<div>
-		<h1 id="timerDisplay">00:00</h1>
-	</div>
-	<div>
-		<button type="button" id="startFocus">Start Focus</button>
-		<a href="blocklist.html">manage blocklist</a>
-	</div>
-	<script src="popup.js"></script>
+	<div class="card">
+		<div>
+			<h1 id="timerDisplay">00:00</h1>
+		</div>
 
+		<div class="stats-card">
+			<p class="stats-label">Level <span id="userLevel">1</span> • <span id="userXp">0</span> XP</p>
+			<div class="xp-bar-container">
+				<div class="xp-bar-fill" id="xpBarFill"></div>
+			</div>
+		</div>
+
+		<div>
+			<button type="button" id="startFocus" class="action-btn">Start Focus</button>
+		</div>
+
+		<div>
+			<a href="blocklist.html" target="_blank" class="nav-link">manage blocklist ↗</a>
+		</div>
+	</div>
+
+	<script src="popup.js"></script>
 </body>
 
 </html>

@@ -1,19 +1,39 @@
 console.log("WAKE");
 const myForm = document.querySelector('.website_form');
+function cleanUrl(input) {
+	let url = input.trim().toLowerCase();
+	url = url.replace(/^https?:\/\//i, '');
+	url = url.replace(/^www\./i, '');
+	url = url.split('/')[0].split('?')[0].split('#')[0];
+	return url;
+}
+
 async function addSite(event) {
 	event.preventDefault();
-	const newSite = document.querySelector('#inputSite').value;
-	console.log(newSite);
-	const sites = await chrome.storage.local.get(["blocklist"])
+	const inputEl = document.querySelector('#inputSite');
+	const rawSite = inputEl.value;
+	const sanitized = cleanUrl(rawSite);
+
+	if (!sanitized) return;
+
+	const sites = await chrome.storage.local.get(["blocklist"]);
 	const res = sites.blocklist || [];
-	const ruleId = res.length + 1;
+
+	const alreadyExists = res.some((site) => site.url === sanitized);
+	if (alreadyExists) {
+		inputEl.value = "";
+		return;
+	}
+
+	const nextId = res.length > 0 ? Math.max(...res.map((s) => s.id)) + 1 : 1;
 	const siteObj = {
-		url: newSite,
-		id: ruleId
+		url: sanitized,
+		id: nextId
 	};
-	res.push(siteObj)
-	await chrome.storage.local.set({ blocklist: res })
-	console.log("site added");
+
+	res.push(siteObj);
+	await chrome.storage.local.set({ blocklist: res });
+	inputEl.value = "";
 	showItems();
 }
 
