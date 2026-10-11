@@ -10,23 +10,50 @@
 
 <body>
 	<div class="card">
-		<div>
-			<h1 id="timerDisplay">00:00</h1>
-		</div>
+		<!-- Main Focus Timer View -->
+		<div id="timerView">
+			<div class="header">
+				<img src="../utils/star.png" alt="star icon">
+				<h2>Clarity</h2>
+			</div>
 
-		<div class="stats-card">
-			<p class="stats-label">Level <span id="userLevel">1</span> • <span id="userXp">0</span> XP</p>
-			<div class="xp-bar-container">
-				<div class="xp-bar-fill" id="xpBarFill"></div>
+			<div>
+				<h1 id="timerDisplay">00:00</h1>
+			</div>
+
+			<div class="stats-card">
+				<p class="stats-label">Level <span id="userLevel">1</span> • <span id="userXp">0</span> XP</p>
+				<div class="xp-bar-container">
+					<div class="xp-bar-fill" id="xpBarFill"></div>
+				</div>
+			</div>
+
+			<div>
+				<button type="button" id="startFocus" class="action-btn">Start Focus</button>
+			</div>
+
+			<div>
+				<button type="button" id="openBlocklist" class="nav-btn">manage blocklist</button>
 			</div>
 		</div>
 
-		<div>
-			<button type="button" id="startFocus" class="action-btn">Start Focus</button>
-		</div>
+		<!-- In-Popup Blocklist View -->
+		<div id="blocklistView" class="hidden">
+			<div class="header">
+				<img src="../utils/star.png" alt="star icon">
+				<h2>Blocklist</h2>
+			</div>
 
-		<div>
-			<a href="blocklist.html" target="_blank" class="nav-link">manage blocklist ↗</a>
+			<form class="website_form">
+				<input type="text" id="inputSite" placeholder="e.g. reddit.com" required />
+				<input type="submit" value="Block" />
+			</form>
+
+			<ul id="siteList"></ul>
+
+			<div>
+				<button type="button" id="backToTimer" class="nav-btn">← back to timer</button>
+			</div>
 		</div>
 	</div>
 

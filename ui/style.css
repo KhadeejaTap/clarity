@@ -8,18 +8,23 @@
 body {
 	background-color: #fdf0f4;
 	color: #4a322d;
-	width: 290px;
-	padding: 16px;
+	width: 300px;
+	padding: 14px;
 	margin: 0 auto;
 }
 
 .card {
 	background: #ffffff;
 	border-radius: 20px;
-	padding: 20px;
+	padding: 18px 14px;
 	box-shadow: 0 10px 25px rgba(216, 139, 151, 0.18);
 	text-align: center;
 	border: 1px solid #fae1e8;
+	overflow: hidden;
+}
+
+.hidden {
+	display: none !important;
 }
 
 .header {
@@ -104,40 +109,37 @@ body {
 	background-color: #b06573;
 }
 
-.nav-link {
-	display: inline-block;
+.nav-btn {
+	background: none;
+	border: none;
 	margin-top: 14px;
 	color: #b36b76;
-	text-decoration: none;
+	cursor: pointer;
 	font-size: 12px;
 	font-weight: 600;
 	transition: color 0.2s ease;
 }
 
-.nav-link:hover {
+.nav-btn:hover {
 	color: #4a322d;
-}
-
-/* Options / Blocklist Page Styling */
-body.options-page {
-	width: 100%;
-	max-width: 440px;
-	padding: 30px 16px;
 }
 
 .website_form {
 	display: flex;
-	gap: 8px;
-	margin-top: 14px;
-	margin-bottom: 18px;
+	align-items: center;
+	gap: 6px;
+	margin-top: 10px;
+	margin-bottom: 14px;
+	width: 100%;
 }
 
 .website_form input[type="text"] {
 	flex: 1;
+	min-width: 0;
 	border: 1.5px solid #fae1e8;
-	border-radius: 12px;
-	padding: 9px 12px;
-	font-size: 13px;
+	border-radius: 10px;
+	padding: 8px 10px;
+	font-size: 12px;
 	color: #4a322d;
 	outline: none;
 	background-color: #fff9fa;
@@ -149,12 +151,14 @@ body.options-page {
 }
 
 .website_form input[type="submit"] {
+	flex-shrink: 0;
+	white-space: nowrap;
 	background-color: #d88b97;
 	color: #ffffff;
 	border: none;
-	border-radius: 12px;
-	padding: 9px 16px;
-	font-size: 13px;
+	border-radius: 10px;
+	padding: 8px 12px;
+	font-size: 12px;
 	font-weight: 700;
 	cursor: pointer;
 	transition: background-color 0.2s ease;
@@ -168,7 +172,11 @@ body.options-page {
 	list-style: none;
 	display: flex;
 	flex-direction: column;
-	gap: 8px;
+	gap: 6px;
+	max-height: 180px;
+	overflow-y: auto;
+	padding-right: 2px;
+	margin-bottom: 6px;
 }
 
 #siteList li {
@@ -177,26 +185,35 @@ body.options-page {
 	justify-content: space-between;
 	background: #fff8fa;
 	border: 1px solid #fae1e8;
-	padding: 8px 12px;
-	border-radius: 12px;
-	font-size: 13px;
+	padding: 6px 10px;
+	border-radius: 10px;
+	font-size: 12px;
 	color: #4a322d;
 	font-weight: 500;
+	word-break: break-all;
 }
 
 #siteList li button {
 	background: #fae1e8;
 	color: #a85d68;
 	border: none;
-	padding: 4px 10px;
-	border-radius: 8px;
+	padding: 3px 8px;
+	border-radius: 6px;
 	font-size: 11px;
 	font-weight: 700;
 	cursor: pointer;
+	flex-shrink: 0;
+	margin-left: 8px;
 	transition: all 0.2s ease;
 }
 
 #siteList li button:hover {
 	background: #d88b97;
 	color: #ffffff;
+}
+
+.empty-state {
+	font-size: 12px;
+	color: #a3827d;
+	margin: 12px 0;
 }
